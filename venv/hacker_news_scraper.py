@@ -3,7 +3,12 @@ from time import sleep
 from bs4 import BeautifulSoup
 
 # min score is minimum score value for posts to be chosen
-min_score = 200
+min_score = input("Posts should have a minimum score of... \n  >")
+try:
+    min_score = int(min_score)
+except ValueError:
+    print("Please enter an integer...")
+    exit(1)
 # count is page count
 count = 1
 
